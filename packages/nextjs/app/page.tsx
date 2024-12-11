@@ -2,23 +2,25 @@
 
 import Link from "next/link";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
-import { Address } from "~~/components/scaffold-eth";
+import { HeroSection } from "~~/components/HeroSection";
+import { EthereumBanner } from "~~/components/ethereum-banner";
+import { FeatureCards } from "~~/components/feature-card";
 
 const Home: NextPage = () => {
   // const { address: connectedAddress } = useAccount();
 
   return (
     <>
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-black text-white max">
         <Header />
         <main>
-          {/* <HeroSection />
-        <SupportedProtocols />
-        <FeatureCards /> */}
+          <HeroSection />
+          <EthereumBanner />
+          <FeatureCards />
+          {/* <SupportedProtocols />
+        <FeatureCards />  */}
         </main>
         <Footer />
       </div>

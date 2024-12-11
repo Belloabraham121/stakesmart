@@ -4,8 +4,8 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import { useOutsideClick } from "~~/hooks/scaffold-eth";
+import { Zap } from "lucide-react";
+import { Button } from "~~/@/components/ui/button";
 
 type HeaderMenuLink = {
   label: string;
@@ -55,20 +55,38 @@ export const Header = () => {
   // );
 
   return (
-    <header className="fixed top-[20.75px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-188px)] rounded-full bg-slate-900/80 backdrop-blur-sm">
+    <div className="fixed top-[20.75px] left-0 right-0 z-50 flex justify-center">
+      <div className="w-full max-w-[1440px] px-6">
+        <header className="rounded-full bg-[#2E2F31]/90 backdrop-blur-sm px-8">
+          <div className="flex h-16 items-center justify-between">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src="/logo (3).svg" alt="StakeSmart Logo" width={32} height={32} />
+              <span className="text-xl font-bold">StakeSmart</span>
+            </Link>
+            <Button className="bg-gradient-to-r from-[#72d9e1] via-[#72f5d1] to-[#76e67c] hover:bg-emerald-600 h-11 px-4 py-2.5 rounded-[90px]">
+              <Zap className="mr-2 h-4 w-4" />
+              Launch App
+              <Image src="/Vector.svg" alt="launch-arrow" width={6} height={10} className="ml-2" />
+            </Button>
+          </div>
+        </header>
+      </div>
+    </div>
+  );
+};
+
+{
+  /* <header className="fixed top-[20.75px] left-1/2 -translate-x-1/2 z-50 w-[calc(100%-188px)] rounded-full bg-slate-900/80 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between px-8">
         <Link href="/" className="flex items-center space-x-2">
           <Image src="/logo (3).svg" alt="Quest Logo" width={32} height={32} />
           <span className="text-xl font-bold">StakeSmart.</span>
         </Link>
-        <div className="h-11 px-4 py-2.5 bg-gradient-to-r from-[#72d9e1] via-[#72f5d1] to-[#76e67c] rounded-[90px] shadow border border-white justify-center items-center gap-1 inline-flex">
-          <div className="w-5 h-5 " />
-          <div className="px-1 justify-center items-center flex">
-            <div className="text-white text-base font-semibold font-['Inter Display'] leading-normal">Launch App</div>
-          </div>
-          <div className="w-5 h-5 relative" />
-        </div>
+        <Button className="bg-emerald-700 hover:bg-emerald-600 h-11 px-4 py-2.5 rounded-[90px]">
+          <Zap className="mr-2 h-4 w-4" />
+          Launch App
+          <Image src="/Vector.svg" alt="launch-arrow" width={6} height={10} className="ml-2" />
+        </Button>
       </div>
-    </header>
-  );
-};
+    </header> */
+}
