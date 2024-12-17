@@ -17,3 +17,17 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "icons.llama.fi",
+        port: "",
+        pathname: "/**",
+        search: "",
+      },
+    ],
+  },
+};

@@ -6,8 +6,8 @@ const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 const titleTemplate = "%s | Scaffold-ETH 2";
 
 export const getMetadata = ({
-  title,
-  description,
+  title = "StakeSmart",
+  description = "StakeSmart is an all-in-one platform that aggregates popular staking protocols like Aave, Lido, and EtherFi, enabling users to compare real-time ROI, fees, and staking terms. Through a clear and intuitive interface, StakeSmart empowers users to explore staking opportunities across multiple protocols, select the best options for their goals, and maximize returns. The platform demystifies staking for all experience levels, offering transparency, ease of access, and informed decision-making for DeFi investors",
   imageRelativePath = "/thumbnail.jpg",
 }: {
   title: string;
@@ -44,7 +44,7 @@ export const getMetadata = ({
       images: [imageUrl],
     },
     icons: {
-      icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+      icon: [{ url: "/logo (3).svg", sizes: "32x32", type: "image/svg" }],
     },
   };
 };

@@ -46,7 +46,7 @@ export const HeaderMenuLinks = () => {
 /**
  * Site header
  */
-export const Header = () => {
+export const SiteHeader = () => {
   // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   // const burgerMenuRef = useRef<HTMLDivElement>(null);
   // useOutsideClick(
@@ -63,11 +63,13 @@ export const Header = () => {
               <Image src="/logo (3).svg" alt="StakeSmart Logo" width={32} height={32} />
               <span className="text-xl font-bold">StakeSmart</span>
             </Link>
-            <Button className="bg-gradient-to-r from-[#72d9e1] via-[#72f5d1] to-[#76e67c] hover:bg-emerald-600 h-11 px-4 py-2.5 rounded-[90px]">
-              <Zap className="mr-2 h-4 w-4" />
-              Launch App
-              <Image src="/Vector.svg" alt="launch-arrow" width={6} height={10} className="ml-2" />
-            </Button>
+            <Link href="/dashboard">
+              <Button className="bg-gradient-to-r from-[#72d9e1] via-[#72f5d1] to-[#76e67c] hover:bg-emerald-600 h-11 px-4 py-2.5 rounded-[90px]">
+                <Zap className="mr-2 h-4 w-4" />
+                Launch App
+                <Image src="/Vector.svg" alt="launch-arrow" width={6} height={10} className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </header>
       </div>

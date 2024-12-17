@@ -1,12 +1,9 @@
-"use client";
-
-import Link from "next/link";
 import type { NextPage } from "next";
-import { Footer } from "~~/components/Footer";
-import { Header } from "~~/components/Header";
-import { HeroSection } from "~~/components/HeroSection";
 import { EthereumBanner } from "~~/components/ethereum-banner";
 import { FeatureCards } from "~~/components/feature-card";
+import { HeroSection } from "~~/components/hero-section";
+import { SiteFooter } from "~~/components/site-footer";
+import { SiteHeader } from "~~/components/site-header";
 
 const Home: NextPage = () => {
   // const { address: connectedAddress } = useAccount();
@@ -14,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="min-h-screen bg-black text-white max">
-        <Header />
+        <SiteHeader />
         <main>
           <HeroSection />
           <EthereumBanner />
@@ -22,7 +19,7 @@ const Home: NextPage = () => {
           {/* <SupportedProtocols />
         <FeatureCards />  */}
         </main>
-        <Footer />
+        <SiteFooter />
       </div>
     </>
   );

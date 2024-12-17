@@ -1,4 +1,4 @@
-# Welcome to Scaffold-ETH 2 Contributing Guide
+yarn# Welcome to Scaffold-ETH 2 Contributing Guide
 
 Thank you for investing your time in contributing to Scaffold-ETH 2!
 
